@@ -18,7 +18,7 @@ const scrape = async (pages) => {
     let lastPageNumber = Number(pages);
     for (let index = 1; index <= lastPageNumber; index++) {
         // wait 1 sec for page load
-        url = `https://www.jbtools.com/hand-tools/#?Category0=Hand+Tools&Category1=Hammers&search_return=all&page=${index}`;
+        url = `https://www.jbtools.com/hand-tools/#?Category0=Hand+Tools&Category1=Pliers&search_return=all&page=${index}`;
         const page = await browser.newPage();
         await page.goto(url);
         console.log('ok')
@@ -55,7 +55,7 @@ async function extractedEvaluateCall(page) {
     });
 }
 
-scrape(15)
+scrape(61)
 
 // module.exports = {
 //     scrape
